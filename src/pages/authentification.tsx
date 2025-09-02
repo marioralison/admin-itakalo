@@ -9,12 +9,17 @@ import {
   CardTitle,
 } from "../../components/ui/card.js"
 
+import { useNavigate } from "react-router-dom"
+
 import { toast } from 'sonner'
 import { Toaster } from "sonner"
 import { Input } from "../../components/ui/input.js"
 import { Label } from "../../components/ui/label.js"
 
 export default function Authentification() {
+
+  const navigate = useNavigate()
+
   return (
     <Card className="w-full max-w-sm py-10 shadow-xl">
       <Toaster />
@@ -57,6 +62,10 @@ export default function Authentification() {
                 onClick: () => console.log("Alert fermé !")
               }
             })
+
+            setTimeout(() => {
+              navigate("/dashboard")
+            }, 3500)
           }}
         >
           Se connecter
