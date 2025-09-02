@@ -46,7 +46,7 @@ export default function SideBar() {
       <div className="w-full flex flex-col justify-center items-center gap-10 text-sm text-zinc-500">
         <Alert
             trigger={
-            <Button className="w-full flex items-center gap-3 px-4 py-4 rounded-lg text-md font-medium transition-colors bg-transparent text-black text-zinc-600 hover:bg-zinc-800 hover:text-white shadow-none">
+            <Button className="w-full flex items-center gap-3 px-4 py-5 rounded-lg text-md font-medium transition-colors bg-transparent text-black text-zinc-600 hover:bg-zinc-800 hover:text-white shadow-none">
                 <LogOut size={22} />
                 Déconnexion
             </Button>
@@ -55,7 +55,7 @@ export default function SideBar() {
             description="Cette action vous déconnectera et vous redirigera vers la page de connexion."
             onConfirm={() => navigate("/")}
         />
-        <p className="p-4 border-t">© 2025 I-Takalo</p>
+        <p className="p-4 border-t">© 2025 - iTakalo</p>
       </div>
     </aside>
   )

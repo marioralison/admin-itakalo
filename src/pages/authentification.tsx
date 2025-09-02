@@ -24,10 +24,10 @@ export default function Authentification() {
     <Card className="w-full max-w-sm py-10 shadow-xl">
       <Toaster />
       <CardHeader>
-        <CardTitle className="w-full flex items-center justify-center text-4xl">I-Takalo</CardTitle>
-        <CardDescription className="w-full flex items-center justify-center">
+        <CardTitle className="w-full px-10 flex items-center justify-center text-5xl text-center">Admin iTakalo</CardTitle>
+        {/* <CardDescription className="w-full flex items-center justify-center">
           Se connecter en tant qu'administrateur
-        </CardDescription>
+        </CardDescription> */}
       </CardHeader>
 
       <CardContent>
