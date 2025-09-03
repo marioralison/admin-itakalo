@@ -1,4 +1,4 @@
-import { Users, UserRound, ShoppingBag, ShoppingCart } from "lucide-react"
+import { Gift, UserRound, ShoppingBag, ShoppingCart } from "lucide-react"
 
 import StatCard from "../components/statCard.js"
 import { ChartMain } from "../components/chartMain.js"
@@ -12,26 +12,26 @@ export default function Dashboard() {
         <StatCard
           icon={<UserRound size={26} />}
           backgroundIcon={<UserRound size={220} />}
-          label="Total utilisateurs"
+          label="Nombre utilisateur"
           value={254}
         />
 
         <StatCard
-          icon={<Users size={26} />}
-          backgroundIcon={<Users size={220} />}
-          label="Utilisateurs actifs"
+          icon={<Gift size={26} />}
+          backgroundIcon={<Gift size={220} />}
+          label="Donation"
           value={120}
         />
         <StatCard
           icon={<ShoppingBag size={26} />}
           backgroundIcon={<ShoppingBag size={220} />}
-          label="Total article"
+          label="Article publié"
           value={120}
         />
         <StatCard
           icon={<ShoppingCart size={26} />}
           backgroundIcon={<ShoppingCart size={220} />}
-          label="Total article vendu"
+          label="Article vendu"
           value={120}
         />
       </section>

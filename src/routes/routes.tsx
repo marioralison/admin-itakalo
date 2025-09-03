@@ -9,6 +9,7 @@ import Notification from "../pages/notifications.js";
 import User from "../pages/users.js";
 import Dashboard from "../pages/dashboard.js";
 import Article from "../pages/articles.js";
+import Gift from "../pages/gift.js";
 
 export default function AppRoutes() {
     return (
@@ -22,6 +23,7 @@ export default function AppRoutes() {
                     <Route path="messages" element={<Messages />} />
                     <Route path="notifications" element={<Notification />} />
                     <Route path="articles" element={<Article />} />
+                    <Route path="gifts" element={<Gift />} />
                 </Route>
             </Routes>
         </BrowserRouter>

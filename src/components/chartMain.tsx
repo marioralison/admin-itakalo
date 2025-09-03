@@ -21,12 +21,12 @@ import {
 export const description = "An area chart with gradient fill"
 
 const chartData = [
-  { month: "January", sell: 186, buy: 80 },
-  { month: "February", sell: 305, buy: 200 },
-  { month: "March", sell: 237, buy: 120 },
-  { month: "April", sell: 73, buy: 190 },
-  { month: "May", sell: 209, buy: 130 },
-  { month: "June", sell: 214, buy: 140 },
+  { month: "January", sell: 186, buy: 80, gift: 75 },
+  { month: "February", sell: 305, buy: 200, gift: 125},
+  { month: "March", sell: 237, buy: 120, gift: 200},
+  { month: "April", sell: 73, buy: 190, gift: 147},
+  { month: "May", sell: 209, buy: 130, gift: 300},
+  { month: "June", sell: 214, buy: 140, gift: 160},
 ]
 
 const chartConfig = {
@@ -38,6 +38,10 @@ const chartConfig = {
     label: "Achats",
     color: "var(--chart-4)",
   },
+  gift: {
+    label: "Dons",
+    color: "var(--chart-2)",
+  }
 } satisfies ChartConfig
 
 export function ChartMain() {
@@ -89,6 +93,18 @@ export function ChartMain() {
                   stopOpacity={0.1}
                 />
               </linearGradient>
+              <linearGradient id="fillGift" x1="0" y1="0" x2="0" y2="1">
+                <stop
+                  offset="5%"
+                  stopColor="var(--color-gift)"
+                  stopOpacity={0.8}
+                />
+                <stop
+                  offset="95%"
+                  stopColor="var(--color-gift)"
+                  stopOpacity={0.1}
+                />
+              </linearGradient>
             </defs>
             <Area
               dataKey="buy"
@@ -104,6 +120,14 @@ export function ChartMain() {
               fill="url(#fillSell)"
               fillOpacity={0.4}
               stroke="var(--color-sell)"
+              stackId="a"
+            />
+            <Area
+              dataKey="gift"
+              type="natural"
+              fill="url(#fillGift)"
+              fillOpacity={0.4}
+              stroke="var(--color-gift)"
               stackId="a"
             />
           </AreaChart>
